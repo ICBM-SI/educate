@@ -4,15 +4,17 @@ model\DetailLatihan.class
 model\KelasOnline.class
 dao\HasilBelajarDao.class
 dao\KelasOnlineDao.class
+dao\PaketSoalDao.class
 model\Jawaban.class
 model\Pelajar.class
 controller\PendaftaranKelasController.class
-config\TestKoneksi.class
 model\Materi.class
+com\mycompany\educatee1\Educatee1.class
 controller\AuthController.class
 dao\PenggunaDao.class
 model\HasilBelajar.class
 dao\LatihanSoalDao.class
+dao\RekomendasiDao.class
 controller\MateriController.class
 model\PendaftaranKelasOnline.class
 model\Pengajar.class
@@ -21,5 +23,6 @@ model\Pengguna.class
 model\LatihanSoal.class
 controller\LatihanSoalController.class
 dao\PendaftaranKelasDao.class
+dao\JawabanDao.class
 config\EducateDB.class
 model\Rekomendasi.class

@@ -4,6 +4,7 @@ import dao.KelasOnlineDao;
 import dao.PendaftaranKelasDao;
 import model.KelasOnline;
 import model.PendaftaranKelasOnline;
+import model.Pelajar;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -11,18 +12,26 @@ public class PendaftaranKelasController {
     private KelasOnlineDao kelasDAO = new KelasOnlineDao();
     private PendaftaranKelasDao pendaftaranDAO = new PendaftaranKelasDao();
 
-    // Menampilkan daftar kelas online yang bisa dipilih pelajar
+
     public List<KelasOnline> tampilkanDaftarKelas() {
         return kelasDAO.getAllKelas();
     }
 
-    // Memproses pendaftaran kelas online oleh pelajar
+
     public boolean prosesPendaftaranKelas(int idPelajar, int idKelasOnline) {
         PendaftaranKelasOnline pendaftaran = new PendaftaranKelasOnline();
-        pendaftaran.setTanggalPendaftaran(LocalDate.now());
-        pendaftaran.setStatusPembayaran("Success"); // Status default atau Pending
-        pendaftaran.setPelajarIdPengguna(idPelajar);
-        pendaftaran.setKelasOnlineIdKelasOnline(idKelasOnline);
+        pendaftaran.setTanggalDaftar(LocalDate.now()); // Menggunakan setTanggalDaftar()
+        pendaftaran.setStatusPembayaran("Pending");    // Status awal pendaftaran
+        
+
+        Pelajar pelajar = new Pelajar();
+        pelajar.setIdPengguna(idPelajar);
+        pendaftaran.setPelajar(pelajar);
+        
+
+        KelasOnline kelas = new KelasOnline();
+        kelas.setIdKelas(idKelasOnline); 
+        pendaftaran.setKelasOnline(kelas);
         
         boolean berhasil = pendaftaranDAO.daftarKelas(pendaftaran);
         if (berhasil) {

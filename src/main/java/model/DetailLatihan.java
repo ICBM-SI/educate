@@ -14,17 +14,21 @@ public class DetailLatihan {
 
     private int idDetailLatihan;
     private String jawabanPelajar;       
-    private String statusJawaban;     
+    private String statusJawaban;      
     private LatihanSoal latihanSoal;
     private HasilBelajar hasilBelajar;
 
-    public DetailLatihan(int idDetailLatihan, String jawabanPelajar, String statusJawaban,
-                         LatihanSoal latihanSoal, HasilBelajar hasilBelajar) {
+
+    public DetailLatihan(int idDetailLatihan, String jawabanPelajar, String statusJawaban, LatihanSoal latihanSoal, HasilBelajar hasilBelajar) {
         this.idDetailLatihan = idDetailLatihan;
         this.jawabanPelajar = jawabanPelajar;
         this.statusJawaban = statusJawaban;
         this.latihanSoal = latihanSoal;
         this.hasilBelajar = hasilBelajar;
+    }
+
+   
+    public DetailLatihan() {
     }
 
     public int getIdDetailLatihan() {
@@ -65,13 +69,5 @@ public class DetailLatihan {
 
     public void setHasilBelajar(HasilBelajar hasilBelajar) {
         this.hasilBelajar = hasilBelajar;
-    }   
-
-    public int getLatihanSoalIdLatihanSoal() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public int getHasilBelajarIdHasil() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    }    
 }

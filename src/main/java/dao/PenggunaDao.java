@@ -1,6 +1,6 @@
 package dao;
 
-import config.EducateDB; // Sesuaikan dengan nama kelas koneksi database Anda
+import config.EducateDB;
 import model.Pengguna;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class PenggunaDao {
 
-    // Fungsi untuk proses Login berdasarkan username dan password
+
     public Pengguna login(String username, String password) {
         Pengguna pengguna = null;
         String sql = "SELECT * FROM pengguna WHERE username = ? AND password = ?";
@@ -27,13 +27,13 @@ public class PenggunaDao {
                 pengguna.setNama(rs.getString("nama"));
                 pengguna.setEmail(rs.getString("email"));
                 pengguna.setUsername(rs.getString("username"));
-                pengguna.setRole(rs.getString("role")); // Admin, Pengajar, atau Pelajar
+                pengguna.setRole(rs.getString("role"));
                 pengguna.setJenisKelamin(rs.getString("jenis_kelamin"));
                 pengguna.setTanggalLahir(rs.getDate("tanggal_lahir").toLocalDate());
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return pengguna; // Mengembalikan objek pengguna jika ditemukan, atau null jika gagal
+        return pengguna;
     }
 }

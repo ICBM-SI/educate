@@ -19,10 +19,10 @@ public class HasilBelajar {
     private int jumlahBenar;
     private int skor;         
     private Pelajar pelajar;
-    private int pelajar_id_pengguna; // Ditambahkan agar sesuai dengan DAO
+    private int pelajar_id_pengguna;
     private List<DetailLatihan> daftarDetail = new ArrayList<>();
 
-    // Konstruktor Kosong (Sangat penting untuk inisialisasi objek di DAO/Controller)
+
     public HasilBelajar() {
     }
 

@@ -23,7 +23,7 @@ public class HasilBelajarController {
 
    
     public void tampilkanRiwayatPelajar(int idPelajar) {
-        // Panggil HasilBelajarDAO.getByPelajar(idPelajar)
+
         System.out.println("Memuat riwayat hasil belajar untuk pelajar ID: " + idPelajar);
     }
 }

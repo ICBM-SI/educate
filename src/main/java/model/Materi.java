@@ -76,12 +76,4 @@ public class Materi {
     public void setPengajar(Pengajar pengajar) {
         this.pengajar = pengajar;
     }
-
-    public int getPengajarIdPengguna() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setPengajarIdPengguna(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

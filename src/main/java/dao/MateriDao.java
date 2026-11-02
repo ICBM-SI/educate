@@ -5,10 +5,9 @@ import model.Materi;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import model.Pengajar;
 
 public class MateriDao {
-
-    // CREATE / Tambah Materi
     public boolean insert(Materi m) {
         String sql = "INSERT INTO materi (nama_materi, topik, tipe_materi, deskripsi_materi, pengajar_id_pengguna) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = EducateDB.getConnection();
@@ -17,7 +16,7 @@ public class MateriDao {
             stmt.setString(2, m.getTopik());
             stmt.setString(3, m.getTipeMateri());
             stmt.setString(4, m.getDeskripsiMateri());
-            stmt.setInt(5, m.getPengajarIdPengguna());
+            stmt.setInt(5, m.getPengajar().getIdPengguna()); // Mengambil ID dari objek Pengajar
             stmt.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -26,7 +25,6 @@ public class MateriDao {
         }
     }
 
-    // READ / Tampilkan Semua Materi
     public List<Materi> getAll() {
         List<Materi> list = new ArrayList<>();
         String sql = "SELECT * FROM materi";
@@ -40,7 +38,9 @@ public class MateriDao {
                 m.setTopik(rs.getString("topik"));
                 m.setTipeMateri(rs.getString("tipe_materi"));
                 m.setDeskripsiMateri(rs.getString("deskripsi_materi"));
-                m.setPengajarIdPengguna(rs.getInt("pengajar_id_pengguna"));
+                Pengajar p = new Pengajar();
+                p.setIdPengguna(rs.getInt("pengajar_id_pengguna"));
+                m.setPengajar(p);
                 list.add(m);
             }
         } catch (SQLException e) {
@@ -48,8 +48,7 @@ public class MateriDao {
         }
         return list;
     }
-
-    // DELETE / Hapus Materi
+    
     public boolean delete(int idMateri) {
         String sql = "DELETE FROM materi WHERE id_materi = ?";
         try (Connection conn = EducateDB.getConnection();

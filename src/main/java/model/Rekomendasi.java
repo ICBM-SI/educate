@@ -17,13 +17,16 @@ public class Rekomendasi {
     private HasilBelajar hasilBelajar;
 
     public Rekomendasi(int idRekomendasi, int nilaiMinimum, int nilaiMaksimum,
-                       String isiRekomendasi, Pengajar pengajar, HasilBelajar hasilBelajar) {
+                        String isiRekomendasi, Pengajar pengajar, HasilBelajar hasilBelajar) {
         this.idRekomendasi = idRekomendasi;
         this.nilaiMinimum = nilaiMinimum;  
         this.nilaiMaksimum = nilaiMaksimum;
         this.isiRekomendasi = isiRekomendasi;
         this.pengajar = pengajar;
         this.hasilBelajar = hasilBelajar;
+    }
+
+    public Rekomendasi() {
     }
 
     public int getIdRekomendasi() {
@@ -73,4 +76,5 @@ public class Rekomendasi {
     public void setHasilBelajar(HasilBelajar hasilBelajar) {
         this.hasilBelajar = hasilBelajar;
     }
+
 }

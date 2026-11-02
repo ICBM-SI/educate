@@ -13,25 +13,52 @@ public class Jawaban {
     public static final String salah = "Salah";
 
     private int idJawaban;
+    private int idLatihan;
+    private int idPelajar;
     private String pilihanJawaban;
     private String kunciJawaban;
-    private String opsi;                
+    private String opsi;            
+    private String status;
     private LatihanSoal latihanSoal;
 
-    public Jawaban(int idJawaban, String pilihanJawaban, String kunciJawaban, String opsi, LatihanSoal latihanSoal) {
+
+    public Jawaban(int idJawaban, int idLatihan, int idPelajar, String pilihanJawaban, String kunciJawaban, String opsi, String status, LatihanSoal latihanSoal) {
         this.idJawaban = idJawaban;
+        this.idLatihan = idLatihan;
+        this.idPelajar = idPelajar;
         this.pilihanJawaban = pilihanJawaban;
         this.kunciJawaban = kunciJawaban;
         this.opsi = opsi;
+        this.status = status;
         this.latihanSoal = latihanSoal;
     }
 
+    public Jawaban() {
+    }
+
+    // Getter dan Setter
     public int getIdJawaban() {
         return idJawaban;
     }
 
     public void setIdJawaban(int idJawaban) {
         this.idJawaban = idJawaban;
+    }
+
+    public int getIdLatihan() {
+        return idLatihan;
+    }
+
+    public void setIdLatihan(int idLatihan) {
+        this.idLatihan = idLatihan;
+    }
+
+    public int getIdPelajar() {
+        return idPelajar;
+    }
+
+    public void setIdPelajar(int idPelajar) {
+        this.idPelajar = idPelajar;
     }
 
     public String getPilihanJawaban() {
@@ -58,15 +85,19 @@ public class Jawaban {
         this.opsi = opsi;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public LatihanSoal getLatihanSoal() {
         return latihanSoal;
     }
 
     public void setLatihanSoal(LatihanSoal latihanSoal) {
         this.latihanSoal = latihanSoal;
-    }
-
-    public int getLatihanSoalIdLatihanSoal() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

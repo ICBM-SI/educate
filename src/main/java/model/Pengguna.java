@@ -5,7 +5,6 @@
 package model;
 import java.time.LocalDate;
 
-
 /**
  *
  * @author HP VICTUS
@@ -21,8 +20,8 @@ public class Pengguna {
     private String role;
      
     protected Pengguna(String role) {
-            this.role = role;
-        }
+        this.role = role;
+    }
 
     public Pengguna(int idPengguna, String nama, String email, String username, 
             String password, String jenisKelamin, LocalDate tanggalLahir, String role) {
@@ -37,7 +36,6 @@ public class Pengguna {
     }
 
     public Pengguna() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getIdPengguna() {

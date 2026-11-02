@@ -13,10 +13,14 @@ public class PaketSoal {
     private String namaPaketSoal;
     private String tingkatKesulitan;
 
+
     public PaketSoal(int idPaketSoal, String namaPaketSoal, String tingkatKesulitan) {
         this.idPaketSoal = idPaketSoal;
         this.namaPaketSoal = namaPaketSoal;
         this.tingkatKesulitan = tingkatKesulitan;
+    }
+
+    public PaketSoal() {
     }
 
     public int getIdPaketSoal() {

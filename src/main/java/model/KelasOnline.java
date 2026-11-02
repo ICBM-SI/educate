@@ -18,7 +18,7 @@ public class KelasOnline {
     private LocalTime waktuMulai;
     private LocalTime waktuSelesai;
     private String linkKelas;
-    private Double harga;              
+    private Double harga;               
     private String statusKelas;      
     private int kuotaMaksimal;
     private Pengajar pengajar;
@@ -41,7 +41,6 @@ public class KelasOnline {
     }
 
     public KelasOnline() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getIdKelas() {
@@ -130,13 +129,5 @@ public class KelasOnline {
 
     public void setPengajar(Pengajar pengajar) {
         this.pengajar = pengajar;
-    }
-
-    public void setIdKelasOnline(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setDeskripsi(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

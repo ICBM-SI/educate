@@ -2,21 +2,26 @@ package dao;
 
 import config.EducateDB;
 import model.LatihanSoal;
-import model.Jawaban;
-import java.sql.*;
+import model.Materi;
+import model.PaketSoal;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LatihanSoalDao {
 
-    // CREATE / Tambah Pertanyaan Latihan Soal
-    public boolean insertSoal(LatihanSoal ls) {
+
+    public boolean insert(LatihanSoal latihan) {
         String sql = "INSERT INTO latihan_soal (pertanyaan, materi_id_materi, paket_soal_id_paket_soal) VALUES (?, ?, ?)";
         try (Connection conn = EducateDB.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, ls.getPertanyaan());
-            stmt.setInt(2, ls.getMateriIdMateri());
-            stmt.setInt(3, ls.getPaketSoalIdPaketSoal());
+             PreparedStatement stmt = conn.prepareStatement(sql)) {          
+            stmt.setString(1, latihan.getPertanyaan());
+            stmt.setInt(2, latihan.getMateri().getIdMateri()); // Mengambil ID dari objek Materi
+            stmt.setInt(3, latihan.getPaketSoal().getIdPaketSoal()); // Mengambil ID dari objek PaketSoal
             stmt.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -25,38 +30,27 @@ public class LatihanSoalDao {
         }
     }
 
-    // CREATE / Tambah Opsi Jawaban untuk Soal
-    public boolean insertJawaban(Jawaban j) {
-        String sql = "INSERT INTO jawaban (pilihan_jawaban, kunci_jawaban, latihan_soal_id_latihan_soal, opsi) VALUES (?, ?, ?, ?)";
-        try (Connection conn = EducateDB.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, j.getPilihanJawaban());
-            stmt.setString(2, j.getKunciJawaban());
-            stmt.setInt(3, j.getLatihanSoalIdLatihanSoal());
-            stmt.setString(4, j.getOpsi());
-            stmt.executeUpdate();
-            return true;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
-
-    // READ / Ambil soal berdasarkan Paket Soal
-    public List<LatihanSoal> getByPaketSoal(int idPaketSoal) {
+    public List<LatihanSoal> getAll() {
         List<LatihanSoal> list = new ArrayList<>();
-        String sql = "SELECT * FROM latihan_soal WHERE paket_soal_id_paket_soal = ?";
+        String sql = "SELECT * FROM latihan_soal";
         try (Connection conn = EducateDB.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, idPaketSoal);
-            ResultSet rs = stmt.executeQuery();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+            
             while (rs.next()) {
-                LatihanSoal ls = new LatihanSoal();
-                ls.setIdLatihanSoal(rs.getInt("id_latihan_soal"));
-                ls.setPertanyaan(rs.getString("pertanyaan"));
-                ls.setMateriIdMateri(rs.getInt("materi_id_materi"));
-                ls.setPaketSoalIdPaketSoal(rs.getInt("paket_soal_id_paket_soal"));
-                list.add(ls);
+                LatihanSoal latihan = new LatihanSoal();
+                latihan.setIdLatihanSoal(rs.getInt("id_latihan_soal"));
+                latihan.setPertanyaan(rs.getString("pertanyaan"));
+                
+                Materi materi = new Materi();
+                materi.setIdMateri(rs.getInt("materi_id_materi"));
+                latihan.setMateri(materi);
+                
+                PaketSoal paketSoal = new PaketSoal();
+                paketSoal.setIdPaketSoal(rs.getInt("paket_soal_id_paket_soal"));
+                latihan.setPaketSoal(paketSoal);
+                
+                list.add(latihan);
             }
         } catch (SQLException e) {
             e.printStackTrace();

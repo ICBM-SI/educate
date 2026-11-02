@@ -6,7 +6,7 @@ import model.Pengguna;
 public class AuthController {
     private PenggunaDao dao = new PenggunaDao();
 
-    // Logika pengecekan login dari Form Login (View)
+
     public Pengguna prosesLogin(String username, String password) {
         if (username.isEmpty() || password.isEmpty()) {
             System.out.println("Username dan Password tidak boleh kosong!");

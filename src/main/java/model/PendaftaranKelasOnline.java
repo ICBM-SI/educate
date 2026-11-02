@@ -12,6 +12,7 @@ import java.time.LocalDate;
 public class PendaftaranKelasOnline {
     public static final String lunas = "Lunas";
     public static final String pending = "Pending";
+    
     private int idPendaftaran;
     private LocalDate tanggalDaftar;
     private Double hargaBayar;         
@@ -22,8 +23,7 @@ public class PendaftaranKelasOnline {
     public PendaftaranKelasOnline() {
     }
 
-    public PendaftaranKelasOnline(int idPendaftaran, LocalDate tanggalDaftar, Double hargaBayar,
-                                  String statusPembayaran, KelasOnline kelasOnline, Pelajar pelajar) {
+    public PendaftaranKelasOnline(int idPendaftaran, LocalDate tanggalDaftar, Double hargaBayar, String statusPembayaran, KelasOnline kelasOnline, Pelajar pelajar) {
         this.idPendaftaran = idPendaftaran;
         this.tanggalDaftar = tanggalDaftar;
         this.hargaBayar = hargaBayar;
@@ -78,29 +78,5 @@ public class PendaftaranKelasOnline {
 
     public void setPelajar(Pelajar pelajar) {
         this.pelajar = pelajar;
-    }
-
-    public String getTanggalPendaftaran() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public int getPelajarIdPengguna() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public int getKelasOnlineIdKelasOnline() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setTanggalPendaftaran(LocalDate now) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setPelajarIdPengguna(int idPelajar) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setKelasOnlineIdKelasOnline(int idKelasOnline) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

@@ -25,7 +25,6 @@ public class LatihanSoal {
     }
 
     public LatihanSoal() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getIdLatihanSoal() {
@@ -60,27 +59,11 @@ public class LatihanSoal {
         this.paketSoal = paketSoal;
     }
 
-    public List getDaftarJawaban() {
+    public List<Jawaban> getDaftarJawaban() {
         return daftarJawaban;
     }
 
-    public void setDaftarJawaban(List daftarJawaban) {
+    public void setDaftarJawaban(List<Jawaban> daftarJawaban) {
         this.daftarJawaban = daftarJawaban;
-    } 
-
-    public int getMateriIdMateri() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public int getPaketSoalIdPaketSoal() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setMateriIdMateri(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setPaketSoalIdPaketSoal(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
