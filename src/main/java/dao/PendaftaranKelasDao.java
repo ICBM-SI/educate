@@ -12,7 +12,6 @@ import java.sql.SQLException;
 
 public class PendaftaranKelasDao {
     public boolean daftarKelas(int idPendaftaran, PendaftaranKelasOnline pendaftaran) {
-    // Kita gunakan subquery untuk mengambil harga secara otomatis berdasarkan id_kelas yang dipilih
     String sql = "INSERT INTO pendaftaran_kelas_online (id_pendaftaran, tanggal_daftar, harga_bayar, status_pembayaran, pelajar_id_pengguna, kelas_online_id_kelas) " +
                  "VALUES (?, ?, (SELECT harga FROM kelas_online WHERE id_kelas = ?), ?, ?, ?)";
                  

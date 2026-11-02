@@ -23,7 +23,6 @@ public class Educatee1 {
         System.out.print("Masukkan ID Kelas Online (contoh: 1): ");
         int idKelas = scanner.nextInt();
         
-        // PENTING: Panggil controller untuk memproses data yang sudah Anda ketik ini!
         boolean hasilInput = pendaftaranController.prosesPendaftaranKelas(idPendaftaran, idPelajar, idKelas);
         
         if (hasilInput) {
