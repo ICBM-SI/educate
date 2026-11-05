@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class EducateDB {
-    private static final String URL = "jdbc:mysql://localhost:3306/educate2";
+    private static final String URL = "jdbc:mysql://localhost:3306/educate?useSSL=false&serverTimezone=Asia/Makassar";
     private static final String USER = "root";
     private static final String PASSWORD = "";
 

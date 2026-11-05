@@ -15,7 +15,6 @@ public class HasilBelajarController {
         hasil.setJumlahBenar(jumlahBenar);
         hasil.setSkor((int) skor);
         hasil.setPelajarIdPengguna(idPelajar);
-        
        
         System.out.println("Hasil belajar pelajar ID " + idPelajar + " berhasil disimpan. Skor: " + skor);
         return true;

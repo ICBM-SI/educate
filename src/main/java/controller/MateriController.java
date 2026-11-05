@@ -7,9 +7,36 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class MateriController {
+    public boolean ubahMateri(
+        int idMateri,
+        String namaMateri,
+        String topik,
+        String tipeMateri,
+        String deskripsi) {
+
+    Materi m = new Materi();
+
+    m.setIdMateri(idMateri);
+    m.setNamaMateri(namaMateri);
+    m.setTopik(topik);
+    m.setTipeMateri(tipeMateri);
+    m.setDeskripsiMateri(deskripsi);
+
+    return materiDao.update(m);
+}
     
-    
-    private MateriDao materiDao = new MateriDao();
+public boolean hapusMateri(int idMateri) {
+    return materiDao.delete(idMateri);
+}
+
+    private MateriDao materiDao;
+
+    public MateriController() {
+        materiDao = new MateriDao();
+    }
+
+
+
 
 
     public boolean tambahMateri(String namaMateri, String topik, String tipeMateri, String deskripsi, int idPengajar) {

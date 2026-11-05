@@ -8,7 +8,6 @@ import config.EducateDB;
 import model.HasilBelajar;
 import model.DetailLatihan;
 import model.Pelajar;
-import model.LatihanSoal;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
