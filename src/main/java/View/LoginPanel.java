@@ -82,7 +82,7 @@ txtPass.setText("");
         panelHeader.setPreferredSize(new java.awt.Dimension(360, 200));
 
         lblMasuk.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        lblMasuk.setText("Masuk");
+        lblMasuk.setText("Keluar");
 
         btnKembali.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnKembali.setText("<");

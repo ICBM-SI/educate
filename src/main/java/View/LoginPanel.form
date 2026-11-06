@@ -114,7 +114,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="SansSerif" size="13" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Masuk"/>
+                <Property name="text" type="java.lang.String" value="Keluar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnKembali">
