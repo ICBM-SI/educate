@@ -47,6 +47,7 @@ public class FormMateriDialog extends javax.swing.JDialog {
         btnPilih = new javax.swing.JButton();
         btnSimpan = new javax.swing.JButton();
         btnBatal = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Data Materi");
@@ -54,6 +55,7 @@ public class FormMateriDialog extends javax.swing.JDialog {
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 0, 102));
@@ -62,36 +64,45 @@ public class FormMateriDialog extends javax.swing.JDialog {
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel1.setAlignmentX(20.0F);
         jLabel1.setAlignmentY(16.0F);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 26, -1, -1));
 
         lblJenis.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         lblJenis.setForeground(new java.awt.Color(102, 0, 102));
         lblJenis.setText("Jenis Materi");
+        jPanel1.add(lblJenis, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 70, -1, -1));
 
         grupJenis.add(rdoTeks);
         rdoTeks.setText("Teks");
         rdoTeks.addActionListener(this::rdoTeksActionPerformed);
+        jPanel1.add(rdoTeks, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 68, 98, -1));
 
         grupJenis.add(rdoVideo);
         rdoVideo.setText("Video");
         rdoVideo.addActionListener(this::rdoVideoActionPerformed);
+        jPanel1.add(rdoVideo, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 68, 98, -1));
 
         lblJudul.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         lblJudul.setForeground(new java.awt.Color(102, 0, 102));
         lblJudul.setText("Judul Materi");
+        jPanel1.add(lblJudul, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 117, -1, -1));
 
         txtJudul.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         txtJudul.addActionListener(this::txtJudulActionPerformed);
+        jPanel1.add(txtJudul, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 114, 276, -1));
 
         lblTopik.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         lblTopik.setForeground(new java.awt.Color(102, 0, 102));
         lblTopik.setText("Topik Materi");
+        jPanel1.add(lblTopik, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 167, -1, -1));
 
         txtTopik.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         txtTopik.addActionListener(this::txtTopikActionPerformed);
+        jPanel1.add(txtTopik, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 164, 276, -1));
 
         lblDeskripsi.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         lblDeskripsi.setForeground(new java.awt.Color(102, 0, 102));
         lblDeskripsi.setText("Deskripsi");
+        jPanel1.add(lblDeskripsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 224, -1, -1));
 
         scrollDeskripsi.setBackground(new java.awt.Color(255, 255, 255));
         scrollDeskripsi.setBorder(null);
@@ -105,106 +116,40 @@ public class FormMateriDialog extends javax.swing.JDialog {
         txtDeskripsi.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         scrollDeskripsi.setViewportView(txtDeskripsi);
 
+        jPanel1.add(scrollDeskripsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 224, 276, -1));
+
         lblKonten.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         lblKonten.setForeground(new java.awt.Color(102, 0, 102));
         lblKonten.setText("Media Konten");
+        jPanel1.add(lblKonten, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 335, -1, -1));
 
         txtPilih.setEditable(false);
         txtPilih.setBackground(new java.awt.Color(204, 204, 204));
         txtPilih.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         txtPilih.setForeground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(txtPilih, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 332, 198, -1));
 
         btnPilih.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         btnPilih.setForeground(new java.awt.Color(102, 102, 102));
         btnPilih.setText("Pilih");
         btnPilih.addActionListener(this::btnPilihActionPerformed);
+        jPanel1.add(btnPilih, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 332, -1, -1));
 
         btnSimpan.setBackground(new java.awt.Color(102, 0, 102));
         btnSimpan.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
         btnSimpan.setText("Simpan");
         btnSimpan.addActionListener(this::btnSimpanActionPerformed);
+        jPanel1.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(313, 404, -1, -1));
 
         btnBatal.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnBatal.setForeground(new java.awt.Color(102, 0, 102));
         btnBatal.setText("Batal");
         btnBatal.addActionListener(this::btnBatalActionPerformed);
+        jPanel1.add(btnBatal, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 404, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblJudul)
-                                .addComponent(lblJenis)
-                                .addComponent(lblTopik)
-                                .addComponent(lblDeskripsi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lblKonten))
-                        .addGap(77, 77, 77)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(scrollDeskripsi)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(txtPilih)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnPilih))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(rdoTeks, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(52, 52, 52)
-                                        .addComponent(rdoVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(txtJudul)
-                                    .addComponent(txtTopik, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSimpan)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnBatal)))
-                .addGap(65, 65, 65))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblJenis)
-                    .addComponent(rdoTeks)
-                    .addComponent(rdoVideo))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblJudul)
-                    .addComponent(txtJudul, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTopik)
-                    .addComponent(txtTopik, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollDeskripsi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDeskripsi))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPilih, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblKonten)
-                    .addComponent(btnPilih))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSimpan)
-                    .addComponent(btnBatal))
-                .addGap(33, 33, 33))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/bgg.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, -1, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -214,7 +159,7 @@ public class FormMateriDialog extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -333,6 +278,7 @@ dispose();        // TODO add your handling code here:
     private javax.swing.JButton btnSimpan;
     private javax.swing.ButtonGroup grupJenis;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblDeskripsi;
     private javax.swing.JLabel lblJenis;

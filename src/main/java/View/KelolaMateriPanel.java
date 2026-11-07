@@ -66,6 +66,7 @@ public class KelolaMateriPanel extends javax.swing.JPanel {
         btnUbah = new javax.swing.JButton();
         btnHapus = new javax.swing.JButton();
         btnTambah = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jMenu1.setText("jMenu1");
 
@@ -75,9 +76,12 @@ public class KelolaMateriPanel extends javax.swing.JPanel {
         jMenu3.setText("Edit");
         jMenuBar1.add(jMenu3);
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel4.setOpaque(false);
         jPanel4.setPreferredSize(new java.awt.Dimension(1152, 648));
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 254));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 0, 102)));
 
         lblMateri.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
@@ -119,12 +123,15 @@ public class KelolaMateriPanel extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 0, 102)));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.setOpaque(false);
 
         scrollMateri.setToolTipText("");
         scrollMateri.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 0, 102)));
 
         tblMateri.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {},
+            new Object [][] {
+
+            },
             new String [] {
                 "ID", "Jenis Materi", "Judul Materi", "Topik", "Deskripsi", "Media Konten"
             }
@@ -200,16 +207,10 @@ public class KelolaMateriPanel extends javax.swing.JPanel {
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 911, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/bgv2.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
@@ -359,6 +360,7 @@ public class KelolaMateriPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnTambah;
     private javax.swing.JButton btnUbah;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;

@@ -56,6 +56,7 @@ txtPass.setText("");
         btnRegister = new javax.swing.JButton();
         txtPass = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -75,10 +76,12 @@ txtPass.setText("");
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setOpaque(false);
         jPanel2.setPreferredSize(new java.awt.Dimension(360, 640));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelHeader.setBackground(new java.awt.Color(255, 255, 255));
+        panelHeader.setOpaque(false);
         panelHeader.setPreferredSize(new java.awt.Dimension(360, 200));
 
         lblMasuk.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
@@ -102,11 +105,11 @@ txtPass.setText("");
         panelHeaderLayout.setVerticalGroup(
             panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHeaderLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(22, 22, 22)
                 .addGroup(panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMasuk, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnKembali))
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         jPanel2.add(panelHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 170));
@@ -114,6 +117,7 @@ txtPass.setText("");
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 630));
 
         panelForm.setBackground(new java.awt.Color(255, 255, 255));
+        panelForm.setOpaque(false);
         panelForm.setPreferredSize(new java.awt.Dimension(360, 440));
 
         SelamatDatang.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
@@ -204,6 +208,9 @@ txtPass.setText("");
         jLabel1.setText("jLabel1");
         jLabel1.setPreferredSize(new java.awt.Dimension(63, 63));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/bgv2.png"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
@@ -259,6 +266,7 @@ txtPass.setText("");
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnRegister;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblBelum;

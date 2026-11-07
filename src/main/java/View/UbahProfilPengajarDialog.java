@@ -68,13 +68,16 @@ public class UbahProfilPengajarDialog extends javax.swing.JDialog {
         lblKeahlian = new javax.swing.JLabel();
         txtKeahlian = new javax.swing.JTextField();
         cmbStatus = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Data Materi");
         setModal(true);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setOpaque(false);
 
         lblJudulpelajar.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         lblJudulpelajar.setForeground(new java.awt.Color(102, 0, 102));
@@ -193,9 +196,8 @@ public class UbahProfilPengajarDialog extends javax.swing.JDialog {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(45, Short.MAX_VALUE)
                 .addComponent(lblJudulpelajar)
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -237,16 +239,10 @@ public class UbahProfilPengajarDialog extends javax.swing.JDialog {
                 .addGap(33, 33, 33))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 460));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/bgv2.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -342,6 +338,7 @@ public class UbahProfilPengajarDialog extends javax.swing.JDialog {
     private javax.swing.JButton btnSimpan;
     private javax.swing.JComboBox<String> cmbStatus;
     private javax.swing.ButtonGroup grupJenis;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblJK;

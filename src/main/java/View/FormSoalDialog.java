@@ -59,6 +59,7 @@ public class FormSoalDialog extends javax.swing.JDialog {
         btnBatal = new javax.swing.JButton();
         txtPaket = new javax.swing.JTextField();
         cmbTingkat = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Data Materi");
@@ -66,6 +67,7 @@ public class FormSoalDialog extends javax.swing.JDialog {
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 0, 102));
@@ -74,25 +76,31 @@ public class FormSoalDialog extends javax.swing.JDialog {
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel1.setAlignmentX(20.0F);
         jLabel1.setAlignmentY(16.0F);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(179, 26, -1, -1));
 
         lblPaket.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         lblPaket.setForeground(new java.awt.Color(102, 0, 102));
         lblPaket.setText("Paket Soal");
+        jPanel1.add(lblPaket, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 71, -1, -1));
 
         lblTopik.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         lblTopik.setForeground(new java.awt.Color(102, 0, 102));
         lblTopik.setText("Topik Materi");
+        jPanel1.add(lblTopik, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 118, -1, -1));
 
         txtTopik.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         txtTopik.addActionListener(this::txtTopikActionPerformed);
+        jPanel1.add(txtTopik, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 115, 276, -1));
 
         lblTingkat.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         lblTingkat.setForeground(new java.awt.Color(102, 0, 102));
         lblTingkat.setText("Tingkat Kesulitan");
+        jPanel1.add(lblTingkat, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 171, -1, -1));
 
         lblPertanyaan.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         lblPertanyaan.setForeground(new java.awt.Color(102, 0, 102));
         lblPertanyaan.setText("Pertanyaan");
+        jPanel1.add(lblPertanyaan, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 225, -1, -1));
 
         scrollDeskripsi.setBackground(new java.awt.Color(255, 255, 255));
         scrollDeskripsi.setBorder(null);
@@ -106,83 +114,31 @@ public class FormSoalDialog extends javax.swing.JDialog {
         txtPertanyaan.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         scrollDeskripsi.setViewportView(txtPertanyaan);
 
+        jPanel1.add(scrollDeskripsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 225, 276, 95));
+
         btnSimpan.setBackground(new java.awt.Color(102, 0, 102));
         btnSimpan.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
         btnSimpan.setText("Simpan");
         btnSimpan.addActionListener(this::btnSimpanActionPerformed);
+        jPanel1.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 404, -1, -1));
 
         btnBatal.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnBatal.setForeground(new java.awt.Color(102, 0, 102));
         btnBatal.setText("Batal");
         btnBatal.addActionListener(this::btnBatalActionPerformed);
+        jPanel1.add(btnBatal, new org.netbeans.lib.awtextra.AbsoluteConstraints(431, 404, -1, -1));
 
         txtPaket.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         txtPaket.addActionListener(this::txtPaketActionPerformed);
+        jPanel1.add(txtPaket, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 68, 276, -1));
 
         cmbTingkat.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         cmbTingkat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Easy", "Medium", "Hard" }));
+        jPanel1.add(cmbTingkat, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 168, 276, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPaket)
-                            .addComponent(lblTopik)
-                            .addComponent(lblTingkat)
-                            .addComponent(lblPertanyaan))
-                        .addGap(74, 74, 74)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(scrollDeskripsi, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtTopik, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
-                                    .addComponent(txtPaket)
-                                    .addComponent(cmbTingkat, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSimpan)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnBatal)))
-                .addGap(65, 65, 65))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(179, 179, 179)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPaket)
-                    .addComponent(txtPaket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTopik)
-                    .addComponent(txtTopik, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTingkat)
-                    .addComponent(cmbTingkat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPertanyaan)
-                    .addComponent(scrollDeskripsi, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSimpan)
-                    .addComponent(btnBatal))
-                .addGap(33, 33, 33))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/bgg.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -192,7 +148,7 @@ public class FormSoalDialog extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -276,6 +232,7 @@ dispose();        // TODO add your handling code here:
     private javax.swing.JComboBox<String> cmbTingkat;
     private javax.swing.ButtonGroup grupJenis;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblPaket;
     private javax.swing.JLabel lblPertanyaan;

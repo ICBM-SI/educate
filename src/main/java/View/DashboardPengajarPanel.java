@@ -4,11 +4,15 @@
  */
 package View;
 
+import java.awt.Component;
+
 /**
  *
  * @author HP VICTUS
  */
 public class DashboardPengajarPanel extends javax.swing.JPanel {
+
+    private Component materi;
 
     /**
      * Creates new form DashboardPengajarPanel
@@ -69,7 +73,6 @@ public class DashboardPengajarPanel extends javax.swing.JPanel {
         sidebarPengajar = new View.SidebarPengajarPanel();
         panelKonten = new javax.swing.JPanel();
         soal = new View.KelolaLatihanSoalPanel();
-        materi = new View.KelolaMateriPanel();
         kelas = new View.KelolaKelasOnlinePanel();
         pelajar = new View.KelolaDataPelajarPanel();
         hasilBelajar = new View.HasilBelajarKeseluruhanPanel();
@@ -77,15 +80,14 @@ public class DashboardPengajarPanel extends javax.swing.JPanel {
         editProfil = new View.EditProfilPengajarPanel();
         rekomendasi = new View.KelolaRekomendasiPanel();
 
-        setLayout(new java.awt.BorderLayout());
-        add(sidebarPengajar, java.awt.BorderLayout.WEST);
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(sidebarPengajar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 651));
 
         panelKonten.setLayout(new java.awt.CardLayout());
 
         soal.setMinimumSize(new java.awt.Dimension(911, 660));
         soal.setPreferredSize(new java.awt.Dimension(911, 660));
         panelKonten.add(soal, "card4");
-        panelKonten.add(materi, "card4");
         panelKonten.add(kelas, "card5");
         panelKonten.add(pelajar, "card6");
         panelKonten.add(hasilBelajar, "card7");
@@ -93,7 +95,7 @@ public class DashboardPengajarPanel extends javax.swing.JPanel {
         panelKonten.add(editProfil, "card9");
         panelKonten.add(rekomendasi, "card3");
 
-        add(panelKonten, java.awt.BorderLayout.CENTER);
+        add(panelKonten, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 0, 952, 651));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -102,7 +104,6 @@ public class DashboardPengajarPanel extends javax.swing.JPanel {
     private View.EditProfilPengajarPanel editProfil;
     private View.HasilBelajarKeseluruhanPanel hasilBelajar;
     private View.KelolaKelasOnlinePanel kelas;
-    private View.KelolaMateriPanel materi;
     private javax.swing.JPanel panelKonten;
     private View.KelolaDataPelajarPanel pelajar;
     private View.KelolaRekomendasiPanel rekomendasi;

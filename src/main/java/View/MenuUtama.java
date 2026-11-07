@@ -69,13 +69,17 @@ public class MenuUtama extends javax.swing.JFrame {
     private void initComponents() {
 
         jFrame1 = new javax.swing.JFrame();
-        dashboardPengajar = new View.DashboardPengajarPanel();
         login = new View.LoginPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.CardLayout());
-        getContentPane().add(dashboardPengajar, "card2");
-        getContentPane().add(login, "card3");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        login.setOpaque(false);
+        getContentPane().add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 656));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/bgv2.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -106,8 +110,8 @@ public class MenuUtama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private View.DashboardPengajarPanel dashboardPengajar;
     private javax.swing.JFrame jFrame1;
+    private javax.swing.JLabel jLabel1;
     private View.LoginPanel login;
     // End of variables declaration//GEN-END:variables
 
